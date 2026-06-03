@@ -188,22 +188,34 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 
-import base64
-
-def get_base64(file):
-    with open(file, "rb") as f:
-        data = f.read()
-    return base64.b64encode(data).decode()
-
-img = get_base64("student_bg.jpg")
-
-st.markdown(f"""
+st.markdown("""
 <style>
-.stApp {{
-    background-image: url("data:image/jpg;base64,{img}");
+.stApp {
+    background-image: url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-}}
+}
+
+h1, h2, h3, h4, p, label {
+    color: white !important;
+}
+
+[data-testid="stSidebar"] {
+    background-color: rgba(0,0,0,0.65);
+}
+
+div[data-testid="metric-container"] {
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 15px;
+}
+
+.stButton > button {
+    width: 100%;
+    border-radius: 10px;
+    font-size: 18px;
+}
 </style>
 """, unsafe_allow_html=True)
