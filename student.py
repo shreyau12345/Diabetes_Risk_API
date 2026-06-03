@@ -177,6 +177,17 @@ if st.button("🚀 Predict Result", use_container_width=True):
 
 # st.dataframe(df.describe())
 
+# ==========================================
+# FOOTER
+# ==========================================
+st.markdown("""
+<hr>
+<center>
+🎓 Developed using Streamlit + Logistic Regression
+</center>
+""", unsafe_allow_html=True)
+
+
 import base64
 
 def get_base64(file):
