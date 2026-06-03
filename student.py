@@ -184,5 +184,25 @@ st.markdown("""
 <hr>
 <center>
 🎓 Developed using Streamlit + Logistic Regression
+
 </center>
+""", unsafe_allow_html=True)
+
+
+
+
+st.markdown("""
+<style>
+.stApp {
+    background: linear-gradient(to right, #d9a7c7, #fffcdc);
+}
+
+[data-testid="stSidebar"] {
+    background-color: #f0f2f6;
+}
+
+h1, h4 {
+    color: black;
+}
+</style>
 """, unsafe_allow_html=True)
