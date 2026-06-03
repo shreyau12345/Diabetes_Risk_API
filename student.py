@@ -190,26 +190,11 @@ st.markdown("""
 
 st.markdown("""
 <style>
-
 .stApp {
-    background: linear-gradient(135deg,
-    #667eea 0%,
-    #764ba2 100%);
+    background-image: url("https://images.unsplash.com/photo-1503676260728-1c00da094a0b");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
-
-.main {
-    color: white;
-}
-
-[data-testid="stSidebar"] {
-    background-color: rgba(255,255,255,0.15);
-}
-
-div[data-testid="metric-container"] {
-    background-color: white;
-    padding: 15px;
-    border-radius: 15px;
-}
-
 </style>
 """, unsafe_allow_html=True)
