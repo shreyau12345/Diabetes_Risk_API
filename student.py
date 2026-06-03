@@ -191,10 +191,9 @@ st.markdown("""
 st.markdown("""
 <style>
 .stApp {
-    background-image: url("https://images.unsplash.com/photo-1503676260728-1c00da094a0b");
+    background-image: url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3");
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
 }
 </style>
 """, unsafe_allow_html=True)
