@@ -177,32 +177,22 @@ if st.button("🚀 Predict Result", use_container_width=True):
 
 # st.dataframe(df.describe())
 
-# ==========================================
-# FOOTER
-# ==========================================
-st.markdown("""
-<hr>
-<center>
-🎓 Developed using Streamlit + Logistic Regression
+import base64
 
-</center>
-""", unsafe_allow_html=True)
+def get_base64(file):
+    with open(file, "rb") as f:
+        data = f.read()
+    return base64.b64encode(data).decode()
 
+img = get_base64("background.jpg")
 
-
-
-st.markdown("""
+st.markdown(f"""
 <style>
-.stApp {
-    background: linear-gradient(to right, #d9a7c7, #fffcdc);
-}
-
-[data-testid="stSidebar"] {
-    background-color: #f0f2f6;
-}
-
-h1, h4 {
-    color: black;
-}
+.stApp {{
+    background-image: url("data:image/jpg;base64,{img}");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}}
 </style>
 """, unsafe_allow_html=True)
