@@ -188,22 +188,28 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 
-import base64
-
-def get_base64(file):
-    with open(file, "rb") as f:
-        data = f.read()
-    return base64.b64encode(data).decode()
-
-img = get_base64("background.jpg")
-
-st.markdown(f"""
+st.markdown("""
 <style>
-.stApp {{
-    background-image: url("data:image/jpg;base64,{img}");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-}}
+
+.stApp {
+    background: linear-gradient(135deg,
+    #667eea 0%,
+    #764ba2 100%);
+}
+
+.main {
+    color: white;
+}
+
+[data-testid="stSidebar"] {
+    background-color: rgba(255,255,255,0.15);
+}
+
+div[data-testid="metric-container"] {
+    background-color: white;
+    padding: 15px;
+    border-radius: 15px;
+}
+
 </style>
 """, unsafe_allow_html=True)
