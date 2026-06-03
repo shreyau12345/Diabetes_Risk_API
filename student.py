@@ -188,13 +188,22 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 
-st.markdown("""
+import base64
+
+def get_base64(file):
+    with open(file, "rb") as f:
+        data = f.read()
+    return base64.b64encode(data).decode()
+
+img = get_base64("student_bg.jpg")
+
+st.markdown(f"""
 <style>
-.stApp {
-    background-image: url("https://images.unsplash.com/photo-1518770660439-4636190af475");
+.stApp {{
+    background-image: url("data:image/jpg;base64,{img}");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-}
+}}
 </style>
 """, unsafe_allow_html=True)
